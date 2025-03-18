@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // "Чому коли ввожу рік він не змінюється ?
+
+
+    function Car(model, producer, yearOfGraduation, maximumSpeed, engineVolume) {
+        this.model = model
+        this.producer = producer
+        this.yearOfGraduation = yearOfGraduation
+        this.maximumSpeed = maximumSpeed
+        this.engineVolume = engineVolume
+        this.drive = function () {
+            console.log(`їдемо зі швидкістю ${maximumSpeed} на годину`)
+        };
+        this.info = function () {
+            for (const key in this) {
+                // console.log(key, this[key])
+            }
+        };
+        this.increaseMaxSpeed = function (newSpeed) {
+            if (newSpeed > 0) this.maximumSpeed = this.maximumSpeed + newSpeed
+        };
+        this.changeYear = function (year) {
+            if (year > 1815) this.year = year;
+        };
+        this.addDriver = function (driver) {
+            if (driver) this.driver = driver
+        };
+
+    }
+
+    const Car1 = new Car('Timeline', 255, 2000, 250, 'is powered by a 2.0-lite',)
+    console.log(Car1)
+    Car1.drive();
+    Car1.info();
+    Car1.increaseMaxSpeed(210);
+    Car1.changeYear(2012);
+    Car1.addDriver({});
+    console.log(Car1)
+</script>
+</body>
+</html>
