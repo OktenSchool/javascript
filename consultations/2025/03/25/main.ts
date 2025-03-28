@@ -109,3 +109,9 @@ class UserClass<ID extends SomeIdChild> {
 // let someUser1 = new UserClass<SomeIdChildChild>();
 // let someUser2 = new UserClass<SomeID>();
 // let someUser3 = new UserClass();
+
+
+function asd() {
+    const self = this as HTMLDivElement;
+}
+
