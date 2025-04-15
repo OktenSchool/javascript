@@ -27,3 +27,7 @@ let users: UserType[] = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
+
+let f1: HTMLFormElement = document.forms['f1'];
+let nameInput= f1.elements['name'].value as HTMLInputElement;
+let value = nameInput.value;
