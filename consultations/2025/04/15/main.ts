@@ -34,17 +34,19 @@
 // };
 
 
-// interface Array<T> {
-//     foreachCustom(callback: (value: T, index: number) => void): void;
-// }
-//
-// Array.prototype.foreachCustom = function <T>(
-//     this: T[],
-//     callback: (value: T, index?: number, array?: T[]) => void
-// ): void {
-//     for (const item of this) {
-//         callback(item)
-//     }
-// };
-//
-// ['asd'].foreachCustom((value) => console.log(value))
+interface Array<T> {
+    foreachCustom(callback: (value: T, index: number) => void): void;
+}
+
+Array.prototype.foreachCustom = function <T>(
+    this: T[],
+    callback: (value: T, index?: number, array?: T[]) => void
+): void {
+    for (const item of this) {
+        callback(item)
+        console.log('asdd')
+    }
+};
+
+['asd'].foreachCustom((value) => console.log(value))
+
