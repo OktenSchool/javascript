@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+Не розумію як зробити завдання #reLkOkTB29Q. Яка полідовність: зробити ітерацію, а потім зрівнювати їх?
+#reLkOkTB29Q
+стоврити масив книжок (назва, кількість сторінок, автори , жанри).
+- знайти наібльшу книжку.
+- знайти книжку/ки з найбільшою кількістю жанрів
+- знайти книжку/ки з найдовшою назвою
+- знайти книжку/ки які писали 2 автори
+- знайти книжку/ки які писав 1 автор
+
+<script>
+
+    const books = [
+        {
+            title: "Війна і мир",
+            pages: 1225,
+            authors: ["Лев Толстой"],
+            genres: ["Роман", "Історичний"]
+        },
+        {
+            title: "1984",
+            pages: 328,
+            authors: ["Джордж Орвелл"],
+            genres: ["Антиутопія", "Наукова фантастика", "Політична сатира"]
+        },
+        {
+            title: "Пригоди Шерлока Холмса",
+            pages: 307,
+            authors: ["Артур Конан Дойл"],
+            genres: ["Детектив", "Пригоди"]
+        },
+        {
+            title: "Гаррі Поттер і філософський камінь",
+            pages: 223,
+            authors: ["Джоан Роулінг"],
+            genres: ["Фентезі", "Пригоди", "Дитяча література"]
+        },
+        {
+            title: "Основи програмування на JavaScript",
+            pages: 456,
+            authors: ["Олександр Іванов", "Марія Петрова"],
+            genres: ["Навчальна", "Програмування"]
+        },
+        {
+            title: "Таємниця старого маяка",
+            pages: 389,
+            authors: ["Ірина Коваленко"],
+            genres: ["Детектив", "Трилер", "Містика", "Фентезі"]
+        },
+        {
+            title: "Таємниця старого маяка",
+            pages: 389,
+            authors: ["Ірина Коваленко"],
+            genres: ["Детектив", "Трилер", "Містика", "Фентезі"]
+        },
+        {
+            title: "Подорож до центру Землі",
+            pages: 183,
+            authors: ["Жуль Верн"],
+            genres: ["Наукова фантастика", "Пригоди"]
+        },
+        {
+            title: "Філософія як шлях життя: роздуми, діалоги, есе",
+            pages: 290,
+            authors: ["Михайло Андрущак", "Ігор Савчук"],
+            genres: ["Філософія", "Есе", "Навчальна"]
+        }
+    ];
+
+    // let maxPage = books[0].pages;
+    // let bookAbs = books[0];
+    // for (const book of books) {
+    //     if (book.pages >= maxPage) {
+    //         maxPage = book.pages;
+    //         bookAbs = book;
+    //     }
+    // }
+
+    let maxGenresCounter = 0;
+    for (const book of books) {
+        if (book.genres.length > maxGenresCounter) {
+            maxGenresCounter = book.genres.length;
+        }
+    }
+
+
+    const booksMaxGenres = [];
+    for (const book of books) {
+        if (book.genres.length === maxGenresCounter) {
+            // booksMaxGenres[booksMaxGenres.length] = book
+            booksMaxGenres.push(book);
+        }
+    }
+
+    console.log(booksMaxGenres)
+
+</script>
+
+</body>
+</html>
