@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div > h2 {
+            color: gold;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="www.examplex.com/sueropasoiudaos.js"></script>
+</head>
+<body>
+<script>
+
+    // якщо ми ітеруємо масив коли ми вписуємо консоль в самому циклі щоб вивести інформацію а коли за межами?
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // for (const user of users) {
+    // }
+    // console.log('asdjhhgahsdgahsgdf');
+
+    // "1. 3 лекція 8 завдання не підключаються стилі а інформація виводиться?
+    // 2. Нарахунок ітерації, яка різниця проітерувати і вивести з кроком 2 чи парним кроком?
+    //     3. – Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів.
+    //     Вивести в консоль всі його елементи в циклі. Поясніть це має бути створений під кожен індекс якесь значення окремо чи один масив з значеннями?"
+
+
+    // За допомогою циклу вивести всю інформацію про користувачів, використовуючи шаблон.
+    // Були проблеми з цим останнім завданням в дз3 (не додаткові). Було складно зрозуміти, куди вставляти шаблон дів: в HTML чи створювати їх через JavaScript. Також плутанина була зі стилями — де їх писати і як усе поєднується між HTML, JavaScript і чи потрібен ще тоді CSS? Якщо що розв'язок цього саме дз не знайшла тому виникли питання.
+
+
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // for (const user of users) {
+    //     document.write(`
+    //     <div style="background: silver;">
+    //         <h2>${user.name}</h2>
+    //         <h3>${user.age}</h3>
+    //     </div>
+    //     <hr>
+    //
+    //     `)
+    // }
+
+    // "Дуже важко заходять колбеки, і зовсім не розумію як робити додаткове завдання
+    // #gsKLAsNWM. Треба ваша допомога, або пропускати і йти далі, бо вже голова розривається. Дякую за відповідь."
+
+    // #gsKLAsNWM
+    // *Через Array.prototype. створити власний foreach, filter
+
+    // class XYZ {
+    //     asd() {
+    //         console.log('foo');
+    //     }
+    //
+    // }
+    //
+    //
+    // XYZ.prototype.asdqwe = function () {
+    //     console.log('foobar');
+    // };
+    //
+    // let aaaa = new XYZ();
+    // aaaa.asdqwe();
+
+
+    Array.prototype.printAllItems = function (condition) {
+        for (const item of this) {
+            if (condition(item)) {
+                console.log(item);
+            }
+        }
+    }
+
+    let arr = ['asd', 'qwe', 'zxc', 'abc'];
+    arr.printAllItems(function (arrayItem) {
+        return arrayItem.includes('a');
+    });
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+    users.printAllItems(function (arrayItem) {
+
+        return arrayItem.age > 30;
+    });
+
+</script>
+
+
+</body>
+</html>
