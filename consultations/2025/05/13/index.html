@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form name="myForm">
+    <input name="input1" type="number">
+    <input name="input2" type="number">
+    <input name="input3" type="text">
+    <button>Вивести</button>
+</form>
+<table id="table"></table>
+
+<!--<button id="button2">button2</button>-->
+
+<script>
+
+    // let buttonElement1 = document.createElement('button'); // +
+    // buttonElement1.textContent = 'prev';
+    // buttonElement1.id = 'button1';
+    // buttonElement1.setAttribute('xxx', 'yyy');
+    // document.body.appendChild(buttonElement1);
+
+
+    // Весь час плутаюсь з value елементів, замість цього виводжу масив. Вот приклад.
+
+    // let myForm = document.forms['myForm'];
+    // let input1 = myForm.input1;
+    // let input2 = myForm['input2'];
+    // let input3 = myForm['input3'];
+    // // let input1 = document.getElementsByName("input1");
+    // // let input2 = document.getElementsByName("input2");
+    // // let input3 = document.getElementsByName("input3");
+    // let table = document.getElementById("table");
+    // myForm.onsubmit = function (event) {
+    //     event.preventDefault();
+    //     let valueInput1 = +input1.value;
+    //     let valueInput2 = +input2.value;
+    //     let valueInput3 = input3.value;
+    //     console.log(valueInput1, valueInput2, valueInput3);
+    // }
+    // // Ось тут не видає value а лише NodeList [input] в консолі.
+    // // Чому у мене так, в чому помиляюсь кожного разу на одній і тіей же помилці?
+    // // Іду як казали: myForm+input1+value і повинно виводить input
+    // // P.s. Я впевнений, що тут все просто , як получається кожного разу після вашого пояснення, або коли прокинеся ранком. Но я кажуть без вас не розібратись, або без бутилки не розібратися :)
+
+
+    // "Попередне моє запитання вирішив. Були зайві строки зверху.
+    // Але хотів щоб ви нагадали головні умови для отримання значення від об'єкта, так як часто виходить undefinit. Тобто треба вказувати весь щлях від форми до об'єкта, або можна задати Id і по ньому знайти значення (Id.volume)?
+
+    // З'явилось ще наступне запитання по завданню  #NKB0tgWIK1G.
+    // Його треба виконувати завдяки localStorage, або через масиви? Якщо можна вирішити це завдання, то буде добре.
+    // Я вибрав рішення через масииви і тут ще одне запитання виникло,
+    // так як виникають помилки по кнопці. Тому прошу також нагадати основні умови для onclick та addEventListener для прив'язки їх до кнопки, якщо можна.
+
+    // Моя помилка: Uncaught TypeError: Cannot set properties of null (setting 'onclick')
+
+    let buttonElement2 = document.createElement('button');          // Зробив елемент
+    let button2 = document.getElementById('button2');                    // Прив'язав йому Id
+    buttonElement2.textContent = 'next';                                             // Дав назву кнопці
+    document.body.append(buttonElement2);                                   // Додав її до body
+
+    button2.onclick = function (event) {                          // Тут невідома для мене помилка
+        event.preventDefault();
+        // поведінка кнопки
+    }
+
+
+</script>
+
+</body>
+</html>
