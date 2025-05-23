@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="items"></div>
+<button id="prev">prev</button>
+<button id="next">next</button>
+
+<script>
+    // Task-10
+    const items = Array.from({length: 100}, (value, i) => `Об'єкт ${i + 1}`);
+    let page = 0, perPage = 10;
+
+    const itemsDiv = document.getElementById('items');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    // function render() {
+    //     const start = page * perPage;
+    //     const end = start + perPage
+    //     itemsDiv.innerHTML = items.slice(start, end).join('\n');
+    //
+    // }
+
+    function render(pageNumber) {
+        const start = pageNumber * perPage;
+        const end = start + perPage
+        itemsDiv.innerHTML = items.slice(start, end).join('\n');
+
+    }
+
+    prevBtn.addEventListener('click', () => {
+        if (page > 0) page--;
+        render(page);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if ((page + 1) * perPage < items.length) page++;
+        render(page);
+    });
+
+    render(page);
+</script>
+
+</body>
+</html>
