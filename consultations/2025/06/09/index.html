@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="" name="f1">
+    <div>
+        <input type="text" name="username">
+    </div>
+    <div>
+        <div>
+            <button>send</button>
+        </div>
+    </div>
+</form>
+
+<script>
+
+    let f1 = document.forms.f1;
+    f1.onsubmit = function (evt) {
+        console.log(f1.username.value);
+    }
+
+</script>
+
+<script>
+
+    // "Питання по подіях в JS. Чи є різниця, на що ""навішувати"" подію: на кнопку, чи на всю форму? Пробувала і так, і так — працює аналогічно. В чому різниця?
+    //
+    // Питання №2 про addEventListener. Чи правильно я розумію, що через слухача можно робити будь-які події? Чи варто його використовувати завжди, коли працюєш з подією?
+    //     "
+
+</script>
+</body>
+</html>
