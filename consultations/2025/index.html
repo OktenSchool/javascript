@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // function foo() {
+    //     console.log('hello')
+    //     return undefined;
+    // }
+    //
+    //
+    // console.log(foo)
+    // console.log(foo())
+
+    //
+    // function foobar() {
+    //     x = 100500;
+    //     return x;
+    //
+    // }
+    //
+    // let number1 = foobar(); // 100500
+    // let number2 = foobar(); // 100500
+
+
+    // function foobar() {
+    //     x = 100500;
+    //
+    //     function inner() {
+    //         console.log(x);
+    //     }
+    //
+    //     return inner
+    // }
+    //
+    // // console.log(foobar());
+    // // console.log(foobar()());
+    // let inner = foobar();
+    // inner();
+
+
+    // function calculator(a, b, action) {
+    //     if (action === '+') {
+    //         return function () {
+    //             console.log(a + b)
+    //         };
+    //     } else if (action === '-') {
+    //         return function () {
+    //             console.log(a - b)
+    //         }
+    //     }
+    // }
+    //
+    // let calculator1 = calculator(10, 20, '+');
+    // calculator1()
+    // let calculator2 = calculator(10, 20, '-');
+    // calculator2()
+    // calculator2()
+    // calculator2()
+    // calculator2()
+    // calculator2()
+
+
+    // function userGenerator(id, name) {
+    //     // let user = {id:id, name:name}
+    //     let user = {id, name}
+    //     return user;
+    // }
+    //
+    // let user1 = userGenerator(10, 'vasya');
+    // console.log(user1)
+    // user1.id = -100
+    // console.log(user1)
+
+
+    // function userGenerator(id, name) {
+    //     let user = {id, name}
+    //
+    //     return {
+    //         getUserId: function () {
+    //             return user.id
+    //         },
+    //         setUserId: function (id) {
+    //             user.id = id
+    //         }
+    //     }
+    //
+    // }
+    //
+    //
+    // let xxx = userGenerator(1, 'vasya');
+    // console.log(xxx)
+    // console.log(xxx.getUserId());
+    // xxx.setUserId(100)
+
+
+    function carSubaru() {
+        let engine = {currentSpeed: 0}
+
+        function increaesSpeedByPedalAngle(angle) {
+            if (angle > 0 && angle < 15) {
+
+                engine.currentSpeed = engine.currentSpeed + 10
+            }
+            if (angle > 15 && angle < 30) {
+                engine.currentSpeed = engine.currentSpeed + 20
+            }
+
+
+        }
+
+        function decreesSpeed() {
+            engine.currentSpeed = engine.currentSpeed - 1
+            console.log(engine);
+        }
+
+
+        return {
+            increaesSpeedByPedalAngle,
+            decreesSpeed
+        }
+
+    }
+
+    let manipulators = carSubaru();
+    manipulators.increaesSpeedByPedalAngle(10)
+    manipulators.increaesSpeedByPedalAngle(24)
+    manipulators.decreesSpeed()
+    manipulators.decreesSpeed()
+    manipulators.decreesSpeed()
+    manipulators.decreesSpeed()
+    manipulators.decreesSpeed()
+    manipulators.decreesSpeed()
+    manipulators.decreesSpeed()
+
+
+
+</script>
+
+</body>
+</html>
