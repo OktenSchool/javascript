@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form id="f1">
+    <input type="email" name="email" placeholder="Email">
+    <button>send</button>
+</form>
+
+<script>
+    let f1 = document.forms.f1;
+    f1.onsubmit = function (e) {
+        e.preventDefault();
+        let email = f1.email.value;
+        let result = email.includes('fuck');
+        console.log(result);
+        f1.style.border = "1px solid red";
+
+    };
+
+    // let item = localStorage.getItem('asdasdasd');
+    // if (item) {
+    //     console.log(item.filed);
+    // }
+
+
+
+
+
+</script>
+
+</body>
+</html>
