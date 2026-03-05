@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    // пробувала працювати з fetch не через .then(), а виключно через async/await.
+    // Такий підхід здався мені складнішим для сприйняття.
+    // Оскільки по факту обидва варіанти дають однаковий результат, хотіла уточнити, чи є між ними принципова різниця, чи це здебільшого питання синтаксису.
+
+    // Також у мене виникло ще одне питання, яке мене трохи плутає. Коли ми пишемо функцію з fetch, вона повертає Promise, навіть якщо всередині є return await ..., і при виклику цієї функції в іншому місці знову потрібно використовувати async await або .then().
+    // Тому мені не зовсім зрозуміло, навіщо тоді повертати значення з await, якщо ззовні результат усе одно приходить як Promise? Приклад я навела нижче. Дякую
+
+
+    fetch().then().catch(() => {
+        //.....
+    });
+
+
+    async function foobar() {
+        try {
+            const response1 = await fetch().then(value => value.json());
+        } catch (e) {
+            //.....
+        }
+        const response2 = await  fetch().then(value => value.json());
+        const response3 = await fetch().then(value => value.json());
+        return  response2;
+
+    }
+
+
+    async function getTodo() {
+
+        return await fetch("https://jsonplaceholder.typicode.com/todos/1").then(res => res.json());
+    }
+
+    async function main() {
+        const result =await getTodo()
+        console.log(result)
+    }
+
+    main()
+
+
+    async function correctMain (){
+        const result = await getTodo()
+        console.log(result) // тут уже поверне нормальний результат
+    }
+
+
+    correctMain()
+
+</script>
+
+</body>
+</html>
