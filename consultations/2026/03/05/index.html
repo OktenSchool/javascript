@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    //   Як зробити перевірку у випадку невірно введеної валюти
+
+    //   і взагалі не введеної?
+
+
+    function checkCurr(currencyBase, currency) {
+        for (const currencyTitle of currencyBase) {
+            if (currency === currencyTitle) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function exchange(sumUAH, currencyValues, exchangeCurrency) {
+
+        const currencyBase = ['USD', 'EUR', 'GBP'];
+        if (
+            checkCurr(currencyBase, currencyValues[0].currency)
+            &&
+            checkCurr(currencyBase, currencyValues[1].currency)
+            &&
+            checkCurr(currencyBase, exchangeCurrency)) {
+            for (let i = 0; i < currencyValues.length; i++) {
+                if (currencyValues[i].currency === exchangeCurrency) {
+                    return sumUAH / currencyValues[i].value
+                }
+            }
+        } else {
+            console.log('invalid currency');
+            return -99999999;
+
+            // throw new Error('Currency not found');
+        }
+
+
+    }
+
+    // exchange(10000,[{currency:`’USD’`,value:25},{currency:`’EUR’`,value:42}],)
+    console.log(exchange(10000, [{currency: 'asd', value: 25}, {currency: `EUR`, value: 42}], `EUR`))
+    console.log('akjdsgjsagd')
+
+
+</script>
+
+</body>
+</html>
