@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Вебінар</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900"
+          rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "FREE";
+            position: fixed;
+            bottom: 40px;
+            left: 0px;
+
+            font-family: 'Montserrat';
+            font-size: 130px;
+            font-weight: 900;
+            color: rgba(0, 0, 0, 0.04);
+
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+
+        /* верхній правий */
+        body::after {
+            content: "WEBINAR";
+            position: fixed;
+            top: 60px;
+            right: 0px;
+
+            font-family: 'Montserrat';
+            font-size: 120px;
+            font-weight: 900;
+            color: rgba(0, 0, 0, 0.04);
+
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px; /* єдиний формат */
+            background: #fff;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .date {
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .list {
+            margin-bottom: 20px;
+        }
+
+        .list p {
+            margin-bottom: 10px;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .viber {
+            background: #7360f2;
+            color: #fff;
+        }
+
+        .telegram {
+            background: #229ED9;
+            color: #fff;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        /* адаптив */
+        @media (max-width: 480px) {
+            .container {
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+    <style>
+    </style>
+
+    <!--google-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104501125-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-104501125-1');
+    </script>
+
+    <!--    facebook-->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '256016011460201');
+        fbq('track', 'PageView');
+        // <?php
+        // if ($fbq) {
+        //     foreach($fbq
+        //     as
+        //     $item
+        // )
+        //     {
+        //         if ($item['fbq']) {
+        //             echo
+        //             $item['fbq'];
+        //         }
+        //     }
+        // }
+        //     ?>
+
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=256016011460201&ev=PageView&noscript=1"/>
+    </noscript>
+
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Всім привіт</h1>
+
+    <p class="date">
+        27 квітня о 20:00 відбудеться вебінар:<br>
+        «Як вивчати програмування з оплатою за результат» 💡
+    </p>
+
+    <div class="list">
+        <p>📊 Яка ситуація на IT-ринку у 2026 році?</p>
+        <p>🤖 Як штучний інтелект змінює правила гри?</p>
+        <p>🎯 Яку професію обрати, щоб не прогадати?</p>
+        <p>📚 Які моделі навчання існують?</p>
+        <p>💰 Як працює оплата після працевлаштування?</p>
+    </div>
+
+    <p class="info">
+        <b>Оберіть зручний для вас месенджер.</b>
+        <br>Посилання на вебінар буде у наступних каналах:
+    </p>
+
+    <div class="buttons">
+        <a data-url="https://invite.viber.com/?g2=AQAYpHtalO9ad1Zpd8Glwyi3x6DYZhW0m0uRlrUW7ihqbnxUzNDIP5bWJ6X%2BxT6m&lang=uk" class="btn viber">Viber група вебінару</a>
+        <a data-url="https://t.me/+EA43ewrGr2o5OWQ6" class="btn telegram">Telegram група вебінару</a>
+    </div>
+
+    <div class="loader-overlay" id="loader">
+        <div class="spinner"></div>
+    </div>
+</div>
+
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const eventType = params.get('event_type') || '<?php echo $event_name ?>';
+    let randomEventId = '<?php echo $random_event_id ?>';
+
+
+    if (!localStorage.getItem('lead_sent')) {
+
+        // fbq('track', eventType, {}, {eventID: randomEventId});
+        localStorage.setItem('lead_sent', 'true');
+    }
+
+
+</script>
+<script>
+    document.querySelectorAll('.btn').forEach(btn => {
+
+
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const url = this.dataset.url;
+
+            document.getElementById('loader').classList.add('active');
+
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+            }
+
+            setTimeout(() => {
+                window.location.assign(url);
+                // console.log('redireact')
+            }, 800);
+        });
+    });
+</script>
+</body>
+</html>
